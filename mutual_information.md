@@ -2,6 +2,7 @@
 
 
 Ref 1, p.57, 1.120
+
 $$
 I(X,Y) \equiv D_{KL}[p(x,y)||p(x) p(y)]
 $$
