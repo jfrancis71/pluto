@@ -21,6 +21,16 @@ d["H[X|Y]"]:1 e["H[Y]"]:3
 f["H[X|Y]"]:1 g["I[X,Y]"]:2 h["H[Y|X]"]:1
 ```
 
-Reference:
+## Curious Aside
+
+p.140 8.12
+
+$$
+D_H[X,Y] \equiv H[X,Y] - I[X;Y]
+$$
+
+It is a distance metric and symmetric. MacKay sees no application of it, but I include it here as I find it curious.
+
+# Reference:
 1, Christopher Bishop, Pattern Recognition and Machine Learning
 2, David Mackay, Information Theory, Inference, and Learning Algorithms.
