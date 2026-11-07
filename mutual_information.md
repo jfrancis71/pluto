@@ -1,12 +1,15 @@
 # Mutual Information
 
+
+Ref 1, p.57, 1.120
 $$
 I(X,Y) \equiv D_{KL}[p(x,y)||p(x) p(y)]
 $$
 
 
-figure 8.1, p. 140, 
-Note, I have added H[X,Y] = H[X] + H[Y|X]. Am I correct to do so?
+Ref 2, figure 8.1, p. 140, 
+Note, I have added H[X,Y] = H[X] + H[Y|X]. Presumably MacKay left it out to reduce redundancy (the relationship is implied at bottom).
+I put it in to be more explicit.
 
 ```mermaid
 block-beta
@@ -18,4 +21,5 @@ f["H[X|Y]"]:1 g["I[X,Y]"]:2 h["H[Y|X]"]:1
 ```
 
 Reference:
-David Mackay, Information Theory, Inference, and Learning Algorithms.
+1, Christopher Bishop, Pattern Recognition and Machine Learning
+2, David Mackay, Information Theory, Inference, and Learning Algorithms.
