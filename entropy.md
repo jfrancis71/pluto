@@ -2,10 +2,10 @@
 
 
 $$
-H[X] = E_X\dist p(x)[]
+H_p[X] = E_{X \sim p(x)}[-log(p(x))]
 $$
 
+## Reference
 
-$$
-Log(p(x)) = E_{z \sim q(z)} [Log(p(x))]
-$$
+David MacKay, Information Theory, Inference, and Learning Algorithms
+p.32 2.35
