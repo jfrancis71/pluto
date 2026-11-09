@@ -3,7 +3,7 @@
 p.34 2.45
 
 $$
-D_{KL}[p(x) || q(x)] = E_{X \sim p(x)}[\log p(x) - \log q(x)]
+D_{KL}[p(x) || q(x)] \equiv E_{X \sim p(x)}[\log p(x) - \log q(x)]
 $$
 
 ## Interpretation:
