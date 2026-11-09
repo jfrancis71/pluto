@@ -21,6 +21,19 @@ d["H[X|Y]"]:1 e["H[Y]"]:3
 f["H[X|Y]"]:1 g["I[X,Y]"]:2 h["H[Y|X]"]:1
 ```
 
+## Relationship between Mutual Information and $D_{KL}$
+
+$$
+I[Y,Y] = E_{x \sim p(x)}[E_{y \sim p(y|x)}[\frac{p(x) p(y|x)}{p(x) p(y)}]]
+$$
+$$
+= E_{x \sim p(x)}[E_{y \sim p(y|x)}[\frac{p(y|x)}{p(y)}]]
+$$
+
+$$
+= E_{x \sim p(x)}[D_{KL}[p(y|x)||p(y)]]
+$$
+
 
 # Reference:
 1, Christopher Bishop, Pattern Recognition and Machine Learning
