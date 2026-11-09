@@ -13,13 +13,13 @@ $$
 This can be expanded as:
 
 $$
-= \sum_x{p(x) log \frac{p(x)}{p_\theta(x)}} = -H[x] - \sum{p(x) log p_\theta(x)}
+= \sum_x{p(x) \log \frac{p(x)}{p_\theta(x)}} = -H[x] - \sum{p(x) \log p_\theta(x)}
 $$
 
 We can do nothing about H[X] it is given to us by nature. But minimizing the above corresponds to maximising:
 
 $$
-E_{x \sim p(x)}[log p_\theta(x)]
+E_{x \sim p(x)}[\log p_\theta(x)]
 $$
 
 We could also have considered minimizing $D_{KL}[p_\theta(x)||p(x)]$
@@ -27,13 +27,13 @@ We could also have considered minimizing $D_{KL}[p_\theta(x)||p(x)]$
 But this equates to:
 
 $$
--H[p_\theta(x)] - E_{x \sim p_\theta(x)}[log p(x)]
+-H[p_\theta(x)] - E_{x \sim p_\theta(x)}[\log p(x)]
 $$
 
 or maximising:
 
 $$
-H[p_\theta(x)] + E_{x \sim p_\theta(x)}[log p(x)]
+H[p_\theta(x)] + E_{x \sim p_\theta(x)}[\log p(x)]
 $$
 
 which is effectively maximising the entropy of $p_\theta(x)$ subject to our model samples being likely in nature. But given that we cannot evaluate the latter, this is infeasible. Why is entropy the 1st term? If it was not there the optimal solution focus. Alternatively, use esc then tab to move to the next interactive element on the page.is to work out whatever nature has as the mostly likely outcome and then the model would collapse just sampling that single outcome.
