@@ -104,3 +104,5 @@ CS229 Lecture notes, Part XV Policy Gradient (REINFORCE), Tengyu Ma, Stanford Un
 OpenAI Spinning Up Notes: [https://spinningup.openai.com/en/latest/spinningup/rl_intro3.html#expected-grad-log-prob-lemma]
 
 Simple statistical gradient-following algorithms for connectionist reinforcement learning, Ronald Williams (1992)
+
+Discrete VAE, John Thickstun, https://courses.cs.washington.edu/courses/cse599i/20au/resources/L09_discretevae.pdf
