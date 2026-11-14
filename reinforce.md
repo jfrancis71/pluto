@@ -92,9 +92,15 @@ $$
 = \nabla_\theta \sum_x p_\theta(x) = \nabla_\theta [1] = 0
 $$
 
+## History
+
+Also known as Policy Gradient Theorem (when applied to policy learning). Ideas introduced (in a policy learning context) by Ronald Williams (1992)
+
 
 ### Reference:
 CS229 Lecture notes, Part XV Policy Gradient (REINFORCE), Tengyu Ma, Stanford University.
 (Note I have replaced integration with summation in my interpretation above)
 
 OpenAI Spinning Up Notes: [https://spinningup.openai.com/en/latest/spinningup/rl_intro3.html#expected-grad-log-prob-lemma]
+
+Simple statistical gradient-following algorithms for connectionist reinforcement learning, Ronald Williams (1992)
