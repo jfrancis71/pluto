@@ -43,9 +43,29 @@ elbo = E_{x \sim p_{(x)}}[\log p_\theta(x)] - D_{KL}[q_\phi(z|x)||p_\theta(z|x)]
 $$
 
 
-## Discussion
+## Limitations
 
 If our objective is a good generative model then presumably we would want to minimize $D_{KL}[p(x)||p_\theta(x)]$, but our above result suggests our VAE objective may trade this off with minimizing $D_{KL}[q_\phi(z)||p_\theta(z|x)]$. So a poor q(z|x) may lead to a suboptimal generative model.
+
+## Interpretation of KL Term in ELBO
+
+$$
+E_{x \sim p_{(x)}}[D_{KL}[q_\phi(z|x)||p_\theta(z)]]
+$$
+
+Noting from MI Theory (see Mutual Information page) if $X \sim p(x)$ and $Y \sim p(y|x)$ then
+
+$$
+I[X, Y]_p  \le E_{(x) \sim p(x)}[D_{KL}[p(y|x)|q(y)]]
+$$
+
+We see that
+
+$$
+I[X,Z] \le E_{x \sim p_{(x)}}[D_{KL}[q_\phi(z|x)||p_\theta(z)]]
+$$
+
+where $X \sim p(x)$ and $Z \sim q_\phi(z|x)$
 
 ## References
 
