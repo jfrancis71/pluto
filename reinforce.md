@@ -3,7 +3,7 @@
 We demonstrate:
 
 $$
-\nabla_\theta[E_{x \sim p_\theta(x)}[f(x)]] = E_{x \sim p_\theta(x)}[f(x) \nabla_\theta[Log(p_\theta(x))]]
+\nabla_\theta[E_{x \sim p_\theta(x)}[f(x)]] = E_{x \sim p_\theta(x)}[f(x) \nabla_\theta[\log(p_\theta(x))]]
 $$
 
 We start by expanding the expectation:
@@ -27,19 +27,19 @@ $$
 Noting that:
 
 $$
-\nabla_x[Log(f(x))] = \frac{\nabla_x[f(x)]}{f(x)}
+\nabla_x[\log(f(x))] = \frac{\nabla_x[f(x)]}{f(x)}
 $$
 
 Then we can write as:
 
 $$
-= \sum_x f(x) p_\theta(x) \nabla_\theta[Log(p_\theta(x))]
+= \sum_x f(x) p_\theta(x) \nabla_\theta[\log(p_\theta(x))]
 $$
 
 Which can be written as an expectation:
 
 $$
-= E_{x \sim p_\theta(x)}[f(x) \nabla_\theta[Log(p_\theta(x))]]
+= E_{x \sim p_\theta(x)}[f(x) \nabla_\theta[\log(p_\theta(x))]]
 $$
 
 ### Reinforce with Baseline
@@ -47,25 +47,25 @@ $$
 We show:
 
 $$
-\nabla_\theta[E_{x \sim p_\theta(x)}[f(x)]] = E_{x \sim p_\theta(x)}[(f(x)-c) \nabla_\theta[Log(p_\theta(x))]]
+\nabla_\theta[E_{x \sim p_\theta(x)}[f(x)]] = E_{x \sim p_\theta(x)}[(f(x)-c) \nabla_\theta[\log(p_\theta(x))]]
 $$
 
 and this holds true for any expression c (which does not depend on x).
 
 $$
-= E_{x \sim p_\theta(x)}[f(x) \nabla_\theta[Log(p_\theta(x))]] + E_{x \sim p_\theta(x)}[c \nabla_\theta[Log(p_\theta(x))]]
+= E_{x \sim p_\theta(x)}[f(x) \nabla_\theta[\log(p_\theta(x))]] + E_{x \sim p_\theta(x)}[c \nabla_\theta[\log(p_\theta(x))]]
 $$
 
 Now the 2nd term is zero by EPGL lemma:
 
 $$
-= c E_{x \sim p_\theta(x)}[\nabla_\theta[Log(p_\theta(x))]] = 0
+= c E_{x \sim p_\theta(x)}[\nabla_\theta[\log(p_\theta(x))]] = 0
 $$
 
 Application: computing the $\phi$ gradient on a VAE reconstruction term
 
 $$
-\nabla_\phi[E_{z \sim q_\phi(z)}[log p(x|z)]] = E_{z \sim q_\phi(z)}[(log p(x|z)- log p(x)) \nabla_\phi[Log(q_\phi(z))]]
+\nabla_\phi[E_{z \sim q_\phi(z)}[\log p(x|z)]] = E_{z \sim q_\phi(z)}[(log p(x|z)- log p(x)) \nabla_\phi[\log(q_\phi(z))]]
 $$
 
 where log p(x) has taken on the c role.
@@ -75,13 +75,13 @@ where log p(x) has taken on the c role.
 States:
 
 $$
-E_{x \sim p_\theta(x)}[\nabla_\theta[Log(p_\theta(x))]] = 0
+E_{x \sim p_\theta(x)}[\nabla_\theta[\log(p_\theta(x))]] = 0
 $$
 
 Expand:
 
 $$
-= \sum_x p_\theta(x) \nabla_\theta[Log(p_\theta(x))]
+= \sum_x p_\theta(x) \nabla_\theta[\log(p_\theta(x))]
 $$
 
 $$
