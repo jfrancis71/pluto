@@ -34,7 +34,47 @@ $$
 = E_{x \sim p(x)}[D_{KL}[p(y|x)||p(y)]]
 $$
 
+## Lower Bound on Mutual Information
+
+See Equation 2 in reference 3.
+
+$$
+I[X,Y]_p = E_{(x,y)\sim p(x) p(y|x)}[\log(\frac{p(x|y).p(y)}{p(x).p(y)})]
+$$
+
+Cancelling p(y)
+
+$$
+= I[X,Y]_p = E_{(x,y)\sim p(x) p(y|x)}[\log(\frac{p(x|y)}{p(x)})]
+$$
+
+$$
+= E_{(x,y)\sim p(x) p(y|x)}[\log(\frac{p(x|y).q(x|y)}{p(x).q(x|y)})]
+$$
+
+$$
+= E_{(x,y)\sim p(x) p(y|x)}[\log(\frac{q(x|y)}{p(x)})] + E_{(x,y)\sim p(x) p(y|x)}[\log(\frac{p(x|y)}{q(x|y)})]
+$$
+
+Break out entropy in 1st term and rewrite 2nd term:
+
+$$
+= E_{(x,y)\sim p(x) p(y|x)}[\log(q(x|y)] + H_p[X] + D_{KL}[p(x|y)||q(x|y)]
+$$
+
+Last 2 terms are non negative, so:
+
+$$
+I[X,Y]_p \ge E_{(x,y)\sim p(x) p(y|x)}[\log(q(x|y)]
+$$
+
+Comment:
+I'm not sure this is a very useful lower bound, as for a discrete distribution over X, this expression will be negative. But we already knew that; mutual information is a non negative quantity.
+
+
 ## Upper Bound on Mutual Information
+
+See equation 1 in reference 3.
 
 Introduding q(y) into fraction:
 
