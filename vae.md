@@ -26,8 +26,6 @@ $$
 = E_{x \sim p_{(x)}}[E_{z \sim q_\phi(z)}[\log p_\theta(x|z)] - D_{KL}[q_\phi(z)||p_\theta(z)] + D_{KL}[q_\phi(z)||p_\theta(z|x)]]
 $$
 
-First two terms are ELBO.
-
 Note, we generally make $q_\phi(z)$ depend on x, so rewrite as $q_\phi(z|x)$
 
 So above becomes:
@@ -35,6 +33,8 @@ So above becomes:
 $$
 = E_{x \sim p_{(x)}}[E_{z \sim q_\phi(z|x)}[\log p_\theta(x|z)] - D_{KL}[q_\phi(z|x)||p_\theta(z)] + D_{KL}[q_\phi(z|x)||p_\theta(z|x)]]
 $$
+
+First two terms are ELBO.
 
 If we rearrange we can see what we are in fact optimizing:
 
