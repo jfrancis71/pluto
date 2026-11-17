@@ -47,6 +47,22 @@ $$
 
 If our objective is a good generative model then presumably we would want to minimize $D_{KL}[p(x)||p_\theta(x)]$, but our above result suggests our VAE objective may trade this off with minimizing $D_{KL}[q_\phi(z)||p_\theta(z|x)]$. So a poor q(z|x) may lead to a suboptimal generative model.
 
+## Interpretation of Reconstruction Term in ELBO
+
+The reconstruction term has an intuitive interpretation as the ability to reconstruct X given Z. There is also an interpretation as the lower bound of mutual information between X and Z under the generative model.
+
+Noting from MI Theory (see Mutual Information page) if $X \sim p(x)$ and $Y \sim p(y|x)$ then
+
+$$
+I[X,Y]_p \ge E_{(x,y)\sim p(x) p(y|x)}[\log(q(x|y)]
+$$
+
+Defining $q_\phi(x,z) = p(x).q_\phi(z|x)$
+
+$$
+I[X,Z]_{q_\phi} \ge E_{X \sim p(x)}[E_{Z\sim q_\phi(z|x)}[\log p_\theta(x|z)]]
+$$
+
 ## Interpretation of KL Term in ELBO
 
 $$
